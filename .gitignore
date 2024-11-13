@@ -320,3 +320,6 @@ lib/
 
 pyvenv.cfg           
 # 가상환경 설정 파일
+
+.DS_Store
+# Mac finder 폴더 메타데이터 정보
