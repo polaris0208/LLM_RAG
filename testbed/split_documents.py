@@ -7,6 +7,8 @@ loader = PyPDFLoader(path)
 
 docs = loader.load()
 
+######################################################### 이전 단계
+
 # 파라미터 설정
 CHUNK_INDEX = 0
 CHUNK_SIZE = 1200
