@@ -5,7 +5,7 @@ from langchain.vectorstores import FAISS
 retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 1})
 
 # 리트리버 테스트
-query = "회사의 저출생 정책이 뭐야?"
+query = "질문"
 
 retriever = vectorstore.as_retriever(search_type="similarity")
 search_result = retriever.get_relevant_documents(query)
