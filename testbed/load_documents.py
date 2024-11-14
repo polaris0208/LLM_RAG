@@ -1,6 +1,6 @@
 from langchain_community.document_loaders import PyPDFLoader
 
-# 가져올 pdf 파일 주소
+# 가져올 pdf 파일 경로
 path = "documents/초거대 언어모델 연구 동향.pdf"
 
 # 사용할 pdf loader 선택
