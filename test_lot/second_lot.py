@@ -1,7 +1,7 @@
 from RAG_Module.RAG_Params import RAGParams
 from RAG_Module.PDF_Loader import PDFLoader
 from RAG_Module.VecotorStore_Utils import VectorStoreReturn
-from RAG_Module.RAG_Chain import RAGChainMake
+from RAG_Module.RAG_Chain_exhausted import RAGChainMake
 
 params = RAGParams(
     KEY= "NBCAMP_01",
