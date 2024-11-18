@@ -35,7 +35,7 @@ def VectorStoreReturn(SPLITS, PARAMS, **kwargs):
 
     uuids = [str(uuid4()) for _ in range(len(SPLITS))]
     vector_store.add_documents(documents=SPLITS, ids=uuids)
-    print('Return Vector Store....!')
+    print('Return Vector Store....!\n')
     return vector_store
 
 def VectorStoreSave(SPLITS, PARAMS, **kwargs):
@@ -63,7 +63,7 @@ def VectorStoreSave(SPLITS, PARAMS, **kwargs):
     uuids = [str(uuid4()) for _ in range(len(SPLITS))]
     vector_store.add_documents(documents=SPLITS, ids=uuids)
     vector_store.save_local(PARAMS.SAVE_PATH)
-    print('Vector Store Saved....!')
+    print('Vector Store Saved....!\n')
 
 def VectorStoreLoad(PARAMS, **kwargs):
     """
@@ -95,6 +95,6 @@ def VectorStoreLoad(PARAMS, **kwargs):
         embedding_model, 
         allow_dangerous_deserialization=PARAMS.IS_SAFE
     )
-    print('Return Vector Store....!')
+    print('Return Vector Store....!\n')
     
     return vector_store
