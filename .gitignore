@@ -323,3 +323,7 @@ pyvenv.cfg
 
 .DS_Store
 # Mac finder 폴더 메타데이터 정보
+
+etc/
+share/
+# ipywidgets 관련 파일
