@@ -94,6 +94,7 @@ def RAG_Coversation(CHAIN, PARAMS, **kwargs):
     """
     사용자로부터 질문을 받아 RAG 체인 기반으로 답변을 생성하는 대화형 함수.
     전체 대화 결과를 리스트에 저장.
+    PARMS에 프롬프트 사용 및 결과 저장을 위한 PromptParams 입력
     """
     print("대화를 시작합니다. 종료하려면 'exit'를 입력하세요.\n")
 
