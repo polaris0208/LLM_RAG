@@ -11,8 +11,8 @@ rag_setting = RAGParams(
     PDF_PATH="documents/초거대 언어모델 연구 동향.pdf",
     SAVE_PATH=None,
     IS_SAFE=True,
-    CHUNK_SIZE=100,
-    CHUNK_OVERLAP=10,
+    CHUNK_SIZE=500,
+    CHUNK_OVERLAP=100,
 )
 
 prompt_setting = PromptParams(
@@ -27,7 +27,7 @@ prompt_setting = PromptParams(
 
 docs = PDFLoader(rag_setting)
 vector_store = VectorStoreReturn(docs, rag_setting)
-question = "RAG에 대해서 설명해주세요"
+question = "업스테이지의 solar 모델에 대해 설명해줘."
 shot = LLMSupport(question, prompt_setting)
 
 prompt_1 = "Answer the question using only the following context."
@@ -46,7 +46,7 @@ PromptSave(prompt_2, prompt_setting, PROMPT_NAME='prompt_2')
 
 template_setting = TemplateParams(
     PERSONA="specialist of large language model",
-    LANG="korean",
+    LANG="only in korean",
     TONE="professional",
     PERPOSE="study large language model",
     HOW_WRITE="itemization",
@@ -63,5 +63,5 @@ template_setting = TemplateParams(
 prompt_3 = PromptTemplate(template_setting)
 PromptSave(prompt_3, prompt_setting, PROMPT_NAME='prompt_3')
 
-QUESTION = ["RAG에 대해서 설명해주세요",]
+QUESTION = ["업스테이지의 solar 모델에 대해 설명해줘.",]
 AutoChain(prompt_setting, vector_store, QUESTION)

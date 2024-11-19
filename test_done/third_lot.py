@@ -27,13 +27,13 @@ prompt_setting = PromptParams(
 
 docs = PDFLoader(rag_setting)
 vector_store = VectorStoreReturn(docs, rag_setting)
-question = "RAG에 대해서 설명해주세요"
+question = "업스테이지의 solar 모델에 대해 설명해줘."
 shot = LLMSupport(question, prompt_setting)
 
 
 template_setting = TemplateParams(
     PERSONA="specialist of large language model",
-    LANG="korean",
+    LANG="only in korean",
     TONE="professional",
     PERPOSE="study large language model",
     HOW_WRITE="itemization",
@@ -51,3 +51,15 @@ template_setting = TemplateParams(
 prompt = PromptTemplate(template_setting)
 chatbot_mk3 = RAGChainMake(vector_store, rag_setting, prompt)
 RAG_Coversation(chatbot_mk3, prompt_setting)
+
+print(shot)
+
+"""답변:
+업스테이지의 Solar 모델은 Llama2를 파인튜닝하여 개발된 Solar-0-70b 모델을 의미합니다. 
+이 모델은 업스테이지에서 솔라를 모델로 채택하여 제품을 소비자들에게 홍보하고 있습니다. 
+Solar 모델은 솔라의 이미지와 스타일을 반영하여 다양한 화장품 제품들을 소비자들에게 소개하고 있습니다. 
+솔라는 업스테이지와의 협업을 통해 자신의 아름다움과 매력을 더욱 돋보이게 하고, 제품의 매력을 소비자들에게 전달하고 있습니다.
+
+업스테이지의 Solar 모델은 한국의 여성 가수이자 댄서인 솔라(Solar)를 모델로 한 제품입니다. 
+Solar 모델은 업스테이지의 다양한 화장품 제품들을 홍보하고 있으며, 솔라의 이미지와 스타일을 반영하여 제품을 소비자들에게 소개하고 있습니다. 
+솔라는 업스테이지와의 협업을 통해 자신의 아름다움과 매력을 더욱 돋보이게 하고, 제품의 매력을 소비자들에게 전달하고 있습니다."""
