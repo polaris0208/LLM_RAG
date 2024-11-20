@@ -48,7 +48,7 @@ LLM_RAG/
 │
 ├── RAG_Module/ : RAG 작동 패키지
 │   ├── setup.py : RAG_Module 패키지 설정 파일
-│   ├── PDF_Loader.py
+│   ├── PDF_Loader.py : PDF 파일 불러오기
 │   ├── RAG_Params.py : 사용할 파라미터를 dataclass 객체로 생성
 │   ├── VectorStore_Utils.py : 생성, 저장, 불러오기 기능
 │   ├── Prompt_Engineering.py : 프롬프트 생성에 필요한 기능
@@ -183,6 +183,8 @@ Model, LLM) 의 등장으로
 1) https://openai.com/blog/chatgpt
 학문적인 통찰이 있다
 ```
+
+### 실행 결과에 큰 영향 없음
 
 [¶ Top](#index)
 ><br>
@@ -351,7 +353,6 @@ SEPERATOR = "\n"
 #### 파라미터 4
 - 한 단락 분량
 - 중첩 : 2~3 문단으로 맥락이 이어지게 설정
-- 해당 파라미터로 진행
 
 ```py
 CHUNK_INDEX = 0
@@ -373,7 +374,7 @@ SEPERATOR = "\n"
 ```
 |------ 모델 ----------|-pages/$-|-MTEB-|
 text-embedding-3-small	62,500	 62.3%
-text-embedding-3-large	9,615	  64.6%
+text-embedding-3-large	9,615	 64.6%
 text-embedding-ada-002	12,500	 61.0%
 ```
 
